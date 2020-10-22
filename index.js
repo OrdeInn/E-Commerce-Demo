@@ -5,13 +5,17 @@ const mongoose = require("mongoose");
 const shortid = require("shortid");
 const cors = require("cors");
 
+
+const data = require("./data.json");
+
+
+
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, "frontend/build")));
 
-app.use(bodyParser.json(), cors({
-    origin:"http://localhost:3000"
-}));
+app.use(bodyParser.json(), cors());
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname + "/frontend/build/index.html"));
@@ -36,8 +40,8 @@ const Product = mongoose.model("product", new mongoose.Schema({
 
 
 app.get("/api/products", async (req, res) => {
-    const products = await Product.find({});
-    res.send(products)
+    //const products = await Product.find({});
+    res.send(data)
 });
 
 app.post("/api/products", async (req, res) => {
@@ -99,7 +103,7 @@ app.post("/api/orders", async (req, res) => {
 
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log("Port 5000 is listening...")
+    console.log("Port 3000 is listening...")
 });

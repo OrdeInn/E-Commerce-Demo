@@ -1,0 +1,27 @@
+{
+  "name": "e-comerce-demo",
+  "version": "1.0.0",
+  "description": "Basic demo e-commerce web application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "keywords": [
+    "react",
+    "e-commerce",
+    "node.js",
+    "express"
+  ],
+  "author": "Emirhan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.6",
+    "shortid": "^2.2.16"
+  }
+}

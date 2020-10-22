@@ -1,0 +1,60 @@
+{
+    "products": [
+        {
+             "_id":"dress1",
+             "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+             "image": "/images/dress1.jpg",
+             "description": "about dress 1",
+             "price" : 45,
+             "availableSizes": ["XL", "XXL"]
+        },
+        {
+            "_id":"dress2",
+            "title": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "image": "/images/dress2.jpg",
+            "description": "about dress 1",
+            "price" : 22,
+            "availableSizes": ["XL", "XXL"]
+       },
+        {
+            "_id":"dress3",
+            "title": "Ut enim ad minim veniam, quis nostrud exercitation",
+            "image": "/images/dress3.jpg",
+            "description": "about dress 3",
+            "price" : 85,
+            "availableSizes": ["XL", "XXL"]
+        },
+        {
+            "_id":"dress4",
+            "title": "Ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            "image": "/images/dress4.jpg",
+            "description": "about dress 4",
+            "price" : 11,
+            "availableSizes": ["XL", "XXL"]
+       },
+       {
+            "_id":"dress5",
+            "title": "Duis aute irure dolor in reprehenderit in",
+            "image": "/images/dress4.jpg",
+            "description": "about dress 5",
+            "price" : 16,
+            "availableSizes": ["XL", "XXL"]
+        },
+        {
+            "_id":"dress6",
+            "title": "Voluptate velit esse cillum dolore eu fugiat",
+            "image": "/images/dress4.jpg",
+            "description": "about dress 6",
+            "price" : 17,
+            "availableSizes": ["XL", "XXL"]
+       },
+       {
+            "_id":"dress7",
+            "title": "Excepteur sint occaecat cupidatat non proident",
+            "image": "/images/dress4.jpg",
+            "description": "about dress 7",
+            "price" : 19,
+            "availableSizes": ["XL", "XXL"]
+        }        
+    ]
+}

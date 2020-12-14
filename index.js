@@ -1,7 +1,10 @@
+require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
+const { Client } = require('pg');
+const client = new Client();
 const shortid = require("shortid");
 const cors = require("cors");
 
@@ -21,14 +24,22 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname + "/frontend/build/index.html"));
 })
 
-mongoose.connect("mongodb://localhost/react-shopping-cart-db", {
+
+
+//Because deploying mongodp into heroku is paid, hosting application fetch data from  the static file named data.json
+/*
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-shopping-cart-db", {
     useNewUrlParser : true,
     useCreateIndex: true,
     useUnifiedTopology: true
 })
 
+*/
 
+//IMPLEMENT PG DATABASE
 
+/*
 const Product = mongoose.model("product", new mongoose.Schema({
     _id: {type: String, default: shortid.generate},
     title: String,
@@ -37,7 +48,7 @@ const Product = mongoose.model("product", new mongoose.Schema({
     price: Number,
     availableSizes: [String]
 }));
-
+*/
 
 app.get("/api/products", async (req, res) => {
     //const products = await Product.find({});
@@ -59,6 +70,7 @@ app.delete("/api/products/:id", async (req, res) => {
 
 //Create a model and implement post method
 
+/*
 const Order = mongoose.model("order", new mongoose.Schema({
     _id: {
         type: String,
@@ -82,6 +94,7 @@ const Order = mongoose.model("order", new mongoose.Schema({
     }
 ));
 
+*/
 app.get("/api/orders", async (req, res) => {
     const orders = await Order.find({});
     res.send(orders)
